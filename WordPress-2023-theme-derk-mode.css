@@ -1,0 +1,38 @@
+/* 用于暗色模式的样式，只作用于前端 */
+@media (prefers-color-scheme: dark) {
+	/* 限制在主页面，不包括 wp-admin 和 iframe 内的 block-editor-iframe__body */
+	body:not(.wp-admin):not(.block-editor-iframe__body) {
+		--wp--preset--color--base: #0f0f0f; /* 舒适的暗色背景 */
+		--wp--preset--color--contrast: #E0E0E0; /* 浅灰白色，用于文字高对比度 */
+		--wp--preset--color--primary: #9DFF20;    /* 保留鲜艳绿色作为主色调 */
+		--wp--preset--color--secondary: #4A7C00;  /* 稍亮的深绿，增强可见性 */
+		--wp--preset--color--tertiary: #333333;   /* 中深灰色，用于次级元素 */
+	}
+
+	/* 输入框 */
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) input:not([type=submit]),
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea {
+		background-color: #2d2d2d;
+		color: #E0E0E0;
+	}
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) input:not([type=submit])::placeholder,
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea::placeholder {
+		color: #A0A0A0;
+	}
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) input:not([type=submit]):focus,
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea:focus {
+		border-color: var(--wp--preset--color--primary);
+		box-shadow: 0 0 5px rgba(157, 255, 32, 0.5);
+	}
+
+	/* 导航菜单 */
+	body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+		background-color: var(--wp--preset--color--base);
+		color: var(--wp--preset--color--contrast);
+	}
+
+	/* 按钮 */
+	body:not(.wp-admin):not(.block-editor-iframe__body) :where(.wp-element-button, .wp-block-button__link) {
+		color: black;
+	}
+}
