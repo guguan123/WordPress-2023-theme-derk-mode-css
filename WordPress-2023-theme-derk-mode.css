@@ -11,12 +11,14 @@
 
 	/* 输入框 */
 	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) input:not([type=submit]),
-	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea {
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea,
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-search__input) {
 		background-color: #2d2d2d;
 		color: #E0E0E0;
 	}
 	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) input:not([type=submit])::placeholder,
-	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea::placeholder {
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) textarea::placeholder,
+	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-search__input)  {
 		color: #A0A0A0;
 	}
 	:where(body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-post-comments-form) input:not([type=submit]):focus,
@@ -34,5 +36,15 @@
 	/* 按钮 */
 	body:not(.wp-admin):not(.block-editor-iframe__body) :where(.wp-element-button, .wp-block-button__link) {
 		color: black;
+	}
+
+	/* 搜索输入框基础样式 */
+	body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-search__input {
+		background-color: #2d2d2d;
+		color: #E0E0E0;
+	}
+	/* 占位符颜色 */
+	body:not(.wp-admin):not(.block-editor-iframe__body) .wp-block-search__input::placeholder {
+		color: #A0A0A0; /* 稍暗的灰色占位符 */
 	}
 }
