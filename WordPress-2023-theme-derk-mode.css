@@ -5,7 +5,7 @@
 		--wp--preset--color--base: #0f0f0f; /* 舒适的暗色背景 */
 		--wp--preset--color--contrast: #E0E0E0; /* 浅灰白色，用于文字高对比度 */
 		--wp--preset--color--primary: #9DFF20;    /* 保留鲜艳绿色作为主色调 */
-		--wp--preset--color--secondary: #4A7C00;  /* 稍亮的深绿，增强可见性 */
+		--wp--preset--color--secondary: #7FB319; /* 明亮深绿，适合可见性 */
 		--wp--preset--color--tertiary: #333333;   /* 中深灰色，用于次级元素 */
 	}
 
